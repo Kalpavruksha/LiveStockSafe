@@ -1,6 +1,21 @@
 # LivestockSafe - Digital Identity & Anti-Theft System 🐑🛡️
 
-A comprehensive, production-ready livestock management platform with advanced theft prevention, real-time notifications, and offline-first PWA capabilities.
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)
+![React](https://img.shields.io/badge/react-18.0.0-blue.svg)
+![MongoDB](https://img.shields.io/badge/mongodb-7.0-green.svg)
+![PWA](https://img.shields.io/badge/PWA-enabled-purple.svg)
+
+**A comprehensive, production-ready livestock management platform with advanced theft prevention, real-time notifications, and offline-first PWA capabilities.**
+
+[Features](#-new-features-implemented) • [Installation](#-getting-started) • [Documentation](#-project-structure) • [Demo](#-demo-script) • [License](#-license)
+
+</div>
+
+---
 
 ## 🚀 New Features Implemented
 
