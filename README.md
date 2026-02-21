@@ -8,6 +8,9 @@
 ![React](https://img.shields.io/badge/react-18.0.0-blue.svg)
 ![MongoDB](https://img.shields.io/badge/mongodb-7.0-green.svg)
 ![PWA](https://img.shields.io/badge/PWA-enabled-purple.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+![Security Policy](https://img.shields.io/badge/security-policy-red.svg)
 
 **A comprehensive, production-ready livestock management platform with advanced theft prevention, real-time notifications, and offline-first PWA capabilities.**
 
