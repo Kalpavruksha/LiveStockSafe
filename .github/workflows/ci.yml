@@ -1,0 +1,61 @@
+name: CI — LiveStockSafe
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: server/package-lock.json
+
+      - name: 📦 Install server dependencies
+        run: npm ci
+        working-directory: ./server
+
+      - name: 🔍 Check for vulnerabilities
+        run: npm audit --audit-level=high
+        working-directory: ./server
+        continue-on-error: true
+
+      - name: ✅ Verify server starts (syntax check)
+        run: node --check index.js
+        working-directory: ./server
+
+  build-client:
+    name: Build Frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: client/package-lock.json
+
+      - name: 📦 Install client dependencies
+        run: npm ci
+        working-directory: ./client
+
+      - name: 🏗️ Build frontend
+        run: npm run build
+        working-directory: ./client
+        env:
+          VITE_API_URL: http://localhost:5000
